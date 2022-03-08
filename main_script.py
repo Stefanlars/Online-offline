@@ -9,7 +9,7 @@ import peerbook
 #TODO: IMPORTANT: before running main script make sure to re-input the cookies as they change and the script will break
 #if not changed in hotspotty_api.py
 my_headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36',
-    'Authorization' : 'Basic ZWFiOTY2NTY0NTk1NDQzY2IzOTkzODM1NWMzYTcwZDE6', 'Accept-Encoding': 'gzip','Cookie':
+    'Authorization' : 'Basic {{{{{{{insert api key}}}}}}}}}}', 'Accept-Encoding': 'gzip','Cookie':
     'AWSALB=ZzLr88p2bX5pDMu+HciCYLfXzA+DkD052gLVUJitHSETUaEbbUjU1U1L0kLLefonHdWZ6NV0Bu6Q9RN75LdEAaW+ebqBYSsgT/9YZleO9neezS5OuZ6tn4V8k/un; AWSALBCORS=ZzLr88p2bX5pDMu+HciCYLfXzA+DkD052gLVUJitHSETUaEbbUjU1U1L0kLLefonHdWZ6NV0Bu6Q9RN75LdEAaW+ebqBYSsgT/9YZleO9neezS5OuZ6tn4V8k/un; snaptid=sac1prdc01wut07',
     'Accept':'*/*','Connection':'keep-alive'}
 
