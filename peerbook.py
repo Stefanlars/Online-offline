@@ -12,7 +12,7 @@ import requests
 def peer_book_ping(helium_id):
     client = SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(hostname='137.184.151.218', port=22, username='root', password='WidePutin2015s')
+    client.connect(hostname='REDACTED', port=22, username='REDACTED', password='REDACTED')
 
     client.exec_command(
         f"docker exec miner miner peer ping /p2p/{helium_id}"
@@ -43,7 +43,7 @@ def peer_book_ping(helium_id):
         else:
             node_status = "Offline"
 
-    except:
+    except AttributeError:
         try:
             list_address = list_addrss_re.group(2)
             stdin, stdout, stderr = client.exec_command(f"telnet {list_address} 44158")
@@ -55,7 +55,7 @@ def peer_book_ping(helium_id):
                 node_status = "successfully telnetted into device"
             else:
                 node_status = "Offline"
-        except:
+        except AttributeError:
             print("ERROR: Unable to fetch listening address")
             node_status = "N/A"
 
@@ -89,7 +89,7 @@ def check_node_peerbook(node_list):
 
             if telnet_re.group(1) == "Connected":
                     print(f"{name} is online and unchanged")
-        except:
+        except AttributeError:
             print(f"Unable to connect to {name} via ip address, trying p2p network...")
             client.exec_command(
                 f"docker exec miner miner peer ping /p2p/{helium_id}"
@@ -107,5 +107,5 @@ def check_node_peerbook(node_list):
                     insightly_api.post_tag(oppor_id=opp_id, tag_name='Offline')
                     insightly_api.add_note(opp_id=opp_id, node_status='offline', node_type='rak')
                     print(f"\n!!!!{name} is offline and changed in insightly!!!!\n")
-            except:
+            except AttributeError:
                 print(f"{name} is online and unchanged in insightly")
