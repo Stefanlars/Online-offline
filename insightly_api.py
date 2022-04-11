@@ -11,7 +11,7 @@ def del_tag(tag_name, oppor_id,):
     "TAG_NAME": f"{tag_name}"
   })
   headers = {
-    'Authorization': 'Basic ZWFiOTY2NTYtNDU5NS00NDNjLWIzOTktMzgzNTVjM2E3MGQxOg==',
+    'Authorization': '*****************************',
     'Content-Type': 'application/json',
     'Cookie': 'snaptid=sac1prdc01wut07'
   }
@@ -28,7 +28,7 @@ def post_tag(tag_name, oppor_id):
     "TAG_NAME": f"{tag_name}"
   })
   headers = {
-    'Authorization': 'Basic ZWFiOTY2NTYtNDU5NS00NDNjLWIzOTktMzgzNTVjM2E3MGQxOg==',
+    'Authorization': '*****************************',
     'Content-Type': 'application/json',
     'Cookie': 'snaptid=sac1prdc01wut07'
   }
@@ -52,7 +52,7 @@ def add_note(opp_id, node_status, node_type):
       "BODY": f"Node {node_status} in explorer: {datetime.now()}"
     })
   headers={
-    'Authorization': 'Basic ZWFiOTY2NTYtNDU5NS00NDNjLWIzOTktMzgzNTVjM2E3MGQxOg==',
+    'Authorization': '**************************************',
     'Content-Type': 'application/json',
     'Cookie': 'snaptid=sac1prdc01wut07'
   }
@@ -71,7 +71,7 @@ def put_opp_fields(opp_id,node_status):
     ]
   })
   headers = {
-    'Authorization': 'Basic ZWFiOTY2NTYtNDU5NS00NDNjLWIzOTktMzgzNTVjM2E3MGQxOg==',
+    'Authorization': '************************************',
     'Content-Type': 'application/json',
     'Cookie': 'snaptid=sac1prdc01wut07'
   }
