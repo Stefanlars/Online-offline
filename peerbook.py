@@ -67,7 +67,7 @@ def peer_book_ping(helium_id):
 def check_node_peerbook(node_list):
     client = SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(hostname='137.184.151.218', port=22, username='root', password='WidePutin2015s')
+    client.connect(hostname='137.184.151.218', port=****, username='******************', password='******************')
 
     for item in node_list:
         helium_id = item['info']['helium_id']
